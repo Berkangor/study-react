@@ -1,0 +1,58 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding-left: 750px;
+    padding-right: 300px;
+}
+
+.startButton {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.startButton:hover {
+    background-color: #0056b3;
+}
+.desc {
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px 20px;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.6;
+
+}
+.fly {
+    display: inline-block;
+    animation: fly 3s linear infinite;
+    position: relative;
+}
+
+@keyframes fly {
+    0% {
+        left: -20px;
+        top: 0px;
+    }
+
+    50% {
+        left: 20px;
+        top: -5px;
+    }
+
+    100% {
+        left: -20px;
+        top: 0px;
+    } }
+

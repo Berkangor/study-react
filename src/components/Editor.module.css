@@ -1,0 +1,9 @@
+.editor {
+    display: block;
+    margin-top: 20px;
+    width: 95%;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px; }
