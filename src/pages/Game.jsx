@@ -23,7 +23,7 @@ function Game() {
     let score = 0;
     const correct = input.trim() === levels[currentLevel].answer.trim();
     if (correct) {
-      score = 100;
+      score = Math.max(100 - elapsedSeconds * 5, 10);
     }
 
     navigate('/result', {
