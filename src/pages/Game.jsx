@@ -11,6 +11,7 @@ function Game() {
   const [startTime, setStartTime] = useState(null);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     setInput(levels[currentLevel].code);
     setStartTime(Date.now());
@@ -20,10 +21,12 @@ function Game() {
     const endTime = Date.now();
     const elapsedSeconds = Math.floor((endTime - startTime) / 1000);
 
+
     let score = 0;
     const correct = input.trim() === levels[currentLevel].answer.trim();
     if (correct) {
-      score = Math.max(100 - elapsedSeconds * 5, 10);
+        score = Math.max(100 - elapsedSeconds * 5, 10);
+        
     }
 
     navigate('/result', {
@@ -42,7 +45,8 @@ function Game() {
       <h2 className={styles.level}>Level {currentLevel + 1}</h2>
       <pre className={styles.code}>{levels[currentLevel].code}</pre>
       <Editor value={input} onChange={setInput} />
-      <button onClick={handleSubmit} className={styles.button}>Submit Fix</button>
+        <button onClick={handleSubmit} className={styles.button}>Submit Fix</button>
+        
       </div>
       </div>
   );
